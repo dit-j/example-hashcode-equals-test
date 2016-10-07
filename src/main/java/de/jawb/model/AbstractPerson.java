@@ -12,6 +12,16 @@ public abstract class AbstractPerson {
     protected String  name;
     protected Integer age;
     protected String  comment;
+    
+//    private String    test;
+//
+//    public String getTest() {
+//        return test;
+//    }
+//
+//    public void setTest(String test) {
+//        this.test = test;
+//    }
 
     public String getId() {
         return id;
