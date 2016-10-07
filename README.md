@@ -1,0 +1,1 @@
+# example-hashcode-equals-test
