@@ -8,25 +8,26 @@ import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Warmup;
 
-import de.jawb.model.Person;
-import de.jawb.model.PersonReflection;
+import de.jawb.model.PersonRegular;
+import de.jawb.model.PersonWithBuilder;
+import de.jawb.model.PersonWithReflection;
 
 @Fork(value = 3)
 @Warmup(iterations = 4, time = 2, timeUnit = TimeUnit.SECONDS)
-@Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
+@Measurement(iterations = 5, time = 450, timeUnit = TimeUnit.MILLISECONDS)
 public class ParserBenchmark {
 
-    private static final List<Person>           regular    = PersonLoader.loadAs(Person.class);
-    private static final List<PersonReflection> reflection = PersonLoader.loadAs(PersonReflection.class);
+    private static final List<PersonRegular>        regular    = PersonLoader.loadAs(PersonRegular.class);
+    private static final List<PersonWithReflection> reflection = PersonLoader.loadAs(PersonWithReflection.class);
+    private static final List<PersonWithBuilder>    builder    = PersonLoader.loadAs(PersonWithBuilder.class);
 
     // verhindere compiler optimierung...
-    public static long                          sum        = 0;
+    public static long                              sum        = 0;
 
-    @Benchmark
-    public void testEquals_Reflection() throws Exception {
+    private void runEquals(List<?> list) {
         long i = 0;
-        for (PersonReflection a : reflection) {
-            for (PersonReflection b : reflection) {
+        for (Object a : list) {
+            for (Object b : list) {
                 if (a.equals(b)) {
                     ++i;
                 }
@@ -35,10 +36,9 @@ public class ParserBenchmark {
         sum += i;
     }
 
-    @Benchmark
-    public void testHashcode_Reflection() throws Exception {
+    private void runHashCode(List<?> list) {
         long i = 0;
-        for (PersonReflection a : reflection) {
+        for (Object a : list) {
             i += a.hashCode();
         }
         sum += i;
@@ -46,24 +46,32 @@ public class ParserBenchmark {
 
     @Benchmark
     public void testEquals_Regular() throws Exception {
-        long i = 0;
-        for (Person a : regular) {
-            for (Person b : regular) {
-                if (a.equals(b)) {
-                    ++i;
-                }
-            }
-        }
-        sum += i;
+        runEquals(regular);
     }
 
     @Benchmark
     public void testHashcode_Regular() throws Exception {
-        long i = 0;
-        for (Person a : regular) {
-            i += a.hashCode();
-        }
-        sum += i;
+        runHashCode(regular);
+    }
+
+    @Benchmark
+    public void testEquals_Reflection() throws Exception {
+        runEquals(reflection);
+    }
+
+    @Benchmark
+    public void testHashcode_Reflection() throws Exception {
+        runHashCode(reflection);
+    }
+
+    @Benchmark
+    public void testEquals_Builder() throws Exception {
+        runEquals(builder);
+    }
+
+    @Benchmark
+    public void testHashcode_Builder() throws Exception {
+        runHashCode(builder);
     }
 
 }

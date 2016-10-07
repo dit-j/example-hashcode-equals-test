@@ -1,16 +1,17 @@
 package de.jawb.model;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public final class PersonReflection {
+/**
+ * @author dit
+ */
+public abstract class AbstractPerson {
 
-    private String  id;
-    private String  name;
-    private Integer age;
-    private String  comment;
+    protected String  id;
+    protected String  name;
+    protected Integer age;
+    protected String  comment;
 
     public String getId() {
         return id;
@@ -45,18 +46,7 @@ public final class PersonReflection {
     }
 
     @Override
-    public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return EqualsBuilder.reflectionEquals(this, obj);
-    }
-
-    @Override
     public String toString() {
         return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
     }
-
 }

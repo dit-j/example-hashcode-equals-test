@@ -1,49 +1,46 @@
 package de.jawb.model;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-
 /**
  * @author dit
  */
-public final class Person {
+public final class PersonRegular extends AbstractPerson {
 
-    private String  id;
-    private String  name;
-    private Integer age;
-    private String  comment;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
+    // private String id;
+    // private String name;
+    // private Integer age;
+    // private String comment;
+    //
+    // public String getId() {
+    // return id;
+    // }
+    //
+    // public void setId(String id) {
+    // this.id = id;
+    // }
+    //
+    // public String getName() {
+    // return name;
+    // }
+    //
+    // public void setName(String name) {
+    // this.name = name;
+    // }
+    //
+    // public Integer getAge() {
+    // return age;
+    // }
+    //
+    // public void setAge(Integer age) {
+    // this.age = age;
+    // }
+    //
+    // public String getComment() {
+    // return comment;
+    // }
+    //
+    // public void setComment(String comment) {
+    // this.comment = comment;
+    // }
 
     @Override
     public int hashCode() {
@@ -64,7 +61,7 @@ public final class Person {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Person other = (Person) obj;
+        PersonRegular other = (PersonRegular) obj;
         if (age == null) {
             if (other.age != null)
                 return false;
@@ -88,9 +85,9 @@ public final class Person {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
-    }
+    // @Override
+    // public String toString() {
+    // return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+    // }
 
 }

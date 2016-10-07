@@ -12,7 +12,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 
-import de.jawb.model.Person;
+import de.jawb.model.PersonRegular;
 import io.github.benas.randombeans.api.EnhancedRandom;
 
 /**
@@ -42,7 +42,7 @@ public class PersonLoader {
     }
 
     static void generate() throws JsonProcessingException {
-        List<Person> persons = EnhancedRandom.randomListOf(250, Person.class);
+        List<PersonRegular> persons = EnhancedRandom.randomListOf(250, PersonRegular.class);
         System.out.println(new ObjectMapper().writeValueAsString(persons));
     }
 
