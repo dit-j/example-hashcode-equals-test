@@ -15,7 +15,7 @@ import de.jawb.model.PersonWithReflection;
 @Fork(value = 3)
 @Warmup(iterations = 4, time = 2, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 450, timeUnit = TimeUnit.MILLISECONDS)
-public class ParserBenchmark {
+public class HashcodeEqualsBenchmark {
 
     private static final List<PersonRegular>        regular    = PersonLoader.loadAs(PersonRegular.class);
     private static final List<PersonWithReflection> reflection = PersonLoader.loadAs(PersonWithReflection.class);
