@@ -1,0 +1,297 @@
+# JMH 1.15 (released 10 days ago)
+# VM version: JDK 1.8.0_101, VM 25.101-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xmx1256M -Xms1256M
+# Warmup: 4 iterations, 200 ms each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: de.jawb.benchmark.HashcodeEqualsBenchmark.testEquals_Builder
+
+# Run progress: 0,00% complete, ETA 00:01:08
+# Fork: 1 of 3
+# Warmup Iteration   1: 652,194 ops/s
+# Warmup Iteration   2: 724,281 ops/s
+# Warmup Iteration   3: 742,209 ops/s
+# Warmup Iteration   4: 804,969 ops/s
+Iteration   1: 813,220 ops/s
+Iteration   2: 826,575 ops/s
+Iteration   3: 817,145 ops/s
+
+# Run progress: 5,56% complete, ETA 00:01:16
+# Fork: 2 of 3
+# Warmup Iteration   1: 688,118 ops/s
+# Warmup Iteration   2: 753,513 ops/s
+# Warmup Iteration   3: 817,266 ops/s
+# Warmup Iteration   4: 820,000 ops/s
+Iteration   1: 816,363 ops/s
+Iteration   2: 825,467 ops/s
+Iteration   3: 821,006 ops/s
+
+# Run progress: 11,11% complete, ETA 00:01:11
+# Fork: 3 of 3
+# Warmup Iteration   1: 681,926 ops/s
+# Warmup Iteration   2: 755,232 ops/s
+# Warmup Iteration   3: 799,491 ops/s
+# Warmup Iteration   4: 821,349 ops/s
+Iteration   1: 836,103 ops/s
+Iteration   2: 831,330 ops/s
+Iteration   3: 815,863 ops/s
+
+
+Result "testEquals_Builder":
+  822,564 ±(99.9%) 13,113 ops/s [Average]
+  (min, avg, max) = (813,220, 822,564, 836,103), stdev = 7,803
+  CI (99.9%): [809,451, 835,676] (assumes normal distribution)
+
+
+# JMH 1.15 (released 10 days ago)
+# VM version: JDK 1.8.0_101, VM 25.101-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xmx1256M -Xms1256M
+# Warmup: 4 iterations, 200 ms each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: de.jawb.benchmark.HashcodeEqualsBenchmark.testEquals_Reflection
+
+# Run progress: 16,67% complete, ETA 00:01:07
+# Fork: 1 of 3
+# Warmup Iteration   1: 3,803 ops/s
+# Warmup Iteration   2: 9,025 ops/s
+# Warmup Iteration   3: 17,873 ops/s
+# Warmup Iteration   4: 24,437 ops/s
+Iteration   1: 24,590 ops/s
+Iteration   2: 25,188 ops/s
+Iteration   3: 25,040 ops/s
+
+# Run progress: 22,22% complete, ETA 00:01:03
+# Fork: 2 of 3
+# Warmup Iteration   1: 3,223 ops/s
+# Warmup Iteration   2: 7,646 ops/s
+# Warmup Iteration   3: 19,224 ops/s
+# Warmup Iteration   4: 24,825 ops/s
+Iteration   1: 25,271 ops/s
+Iteration   2: 25,927 ops/s
+Iteration   3: 25,980 ops/s
+
+# Run progress: 27,78% complete, ETA 00:00:59
+# Fork: 3 of 3
+# Warmup Iteration   1: 3,493 ops/s
+# Warmup Iteration   2: 8,432 ops/s
+# Warmup Iteration   3: 14,805 ops/s
+# Warmup Iteration   4: 19,815 ops/s
+Iteration   1: 22,959 ops/s
+Iteration   2: 24,627 ops/s
+Iteration   3: 24,656 ops/s
+
+
+Result "testEquals_Reflection":
+  24,915 ±(99.9%) 1,510 ops/s [Average]
+  (min, avg, max) = (22,959, 24,915, 25,980), stdev = 0,898
+  CI (99.9%): [23,406, 26,425] (assumes normal distribution)
+
+
+# JMH 1.15 (released 10 days ago)
+# VM version: JDK 1.8.0_101, VM 25.101-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xmx1256M -Xms1256M
+# Warmup: 4 iterations, 200 ms each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: de.jawb.benchmark.HashcodeEqualsBenchmark.testEquals_Regular
+
+# Run progress: 33,33% complete, ETA 00:00:54
+# Fork: 1 of 3
+# Warmup Iteration   1: 6591,354 ops/s
+# Warmup Iteration   2: 7627,405 ops/s
+# Warmup Iteration   3: 7533,955 ops/s
+# Warmup Iteration   4: 7300,582 ops/s
+Iteration   1: 7087,476 ops/s
+Iteration   2: 6997,695 ops/s
+Iteration   3: 7122,480 ops/s
+
+# Run progress: 38,89% complete, ETA 00:00:50
+# Fork: 2 of 3
+# Warmup Iteration   1: 6479,142 ops/s
+# Warmup Iteration   2: 7710,463 ops/s
+# Warmup Iteration   3: 7652,177 ops/s
+# Warmup Iteration   4: 7479,204 ops/s
+Iteration   1: 7182,918 ops/s
+Iteration   2: 7174,475 ops/s
+Iteration   3: 7181,347 ops/s
+
+# Run progress: 44,44% complete, ETA 00:00:45
+# Fork: 3 of 3
+# Warmup Iteration   1: 6511,515 ops/s
+# Warmup Iteration   2: 7597,249 ops/s
+# Warmup Iteration   3: 7606,785 ops/s
+# Warmup Iteration   4: 6900,352 ops/s
+Iteration   1: 6845,410 ops/s
+Iteration   2: 7178,003 ops/s
+Iteration   3: 7183,639 ops/s
+
+
+Result "testEquals_Regular":
+  7105,938 ±(99.9%) 195,020 ops/s [Average]
+  (min, avg, max) = (6845,410, 7105,938, 7183,639), stdev = 116,053
+  CI (99.9%): [6910,918, 7300,958] (assumes normal distribution)
+
+
+# JMH 1.15 (released 10 days ago)
+# VM version: JDK 1.8.0_101, VM 25.101-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xmx1256M -Xms1256M
+# Warmup: 4 iterations, 200 ms each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: de.jawb.benchmark.HashcodeEqualsBenchmark.testHashcode_Builder
+
+# Run progress: 50,00% complete, ETA 00:00:40
+# Fork: 1 of 3
+# Warmup Iteration   1: 462221,402 ops/s
+# Warmup Iteration   2: 548652,976 ops/s
+# Warmup Iteration   3: 541116,638 ops/s
+# Warmup Iteration   4: 548925,350 ops/s
+Iteration   1: 513623,621 ops/s
+Iteration   2: 527001,850 ops/s
+Iteration   3: 498667,467 ops/s
+
+# Run progress: 55,56% complete, ETA 00:00:36
+# Fork: 2 of 3
+# Warmup Iteration   1: 436451,803 ops/s
+# Warmup Iteration   2: 514812,689 ops/s
+# Warmup Iteration   3: 511432,560 ops/s
+# Warmup Iteration   4: 487689,382 ops/s
+Iteration   1: 513642,023 ops/s
+Iteration   2: 517316,271 ops/s
+Iteration   3: 509821,702 ops/s
+
+# Run progress: 61,11% complete, ETA 00:00:31
+# Fork: 3 of 3
+# Warmup Iteration   1: 473777,110 ops/s
+# Warmup Iteration   2: 537305,695 ops/s
+# Warmup Iteration   3: 555396,356 ops/s
+# Warmup Iteration   4: 547803,497 ops/s
+Iteration   1: 519384,417 ops/s
+Iteration   2: 473127,750 ops/s
+Iteration   3: 429062,735 ops/s
+
+
+Result "testHashcode_Builder":
+  500183,093 ±(99.9%) 51891,751 ops/s [Average]
+  (min, avg, max) = (429062,735, 500183,093, 527001,850), stdev = 30879,949
+  CI (99.9%): [448291,342, 552074,844] (assumes normal distribution)
+
+
+# JMH 1.15 (released 10 days ago)
+# VM version: JDK 1.8.0_101, VM 25.101-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xmx1256M -Xms1256M
+# Warmup: 4 iterations, 200 ms each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: de.jawb.benchmark.HashcodeEqualsBenchmark.testHashcode_Reflection
+
+# Run progress: 66,67% complete, ETA 00:00:27
+# Fork: 1 of 3
+# Warmup Iteration   1: 933,605 ops/s
+# Warmup Iteration   2: 1681,441 ops/s
+# Warmup Iteration   3: 2902,536 ops/s
+# Warmup Iteration   4: 5330,096 ops/s
+Iteration   1: 4972,459 ops/s
+Iteration   2: 4819,464 ops/s
+Iteration   3: 6147,176 ops/s
+
+# Run progress: 72,22% complete, ETA 00:00:22
+# Fork: 2 of 3
+# Warmup Iteration   1: 397,243 ops/s
+# Warmup Iteration   2: 1175,577 ops/s
+# Warmup Iteration   3: 2325,349 ops/s
+# Warmup Iteration   4: 3528,795 ops/s
+Iteration   1: 6151,336 ops/s
+Iteration   2: 6198,875 ops/s
+Iteration   3: 4596,941 ops/s
+
+# Run progress: 77,78% complete, ETA 00:00:18
+# Fork: 3 of 3
+# Warmup Iteration   1: 509,376 ops/s
+# Warmup Iteration   2: 932,463 ops/s
+# Warmup Iteration   3: 2965,434 ops/s
+# Warmup Iteration   4: 2763,332 ops/s
+Iteration   1: 6426,370 ops/s
+Iteration   2: 5965,817 ops/s
+Iteration   3: 6852,372 ops/s
+
+
+Result "testHashcode_Reflection":
+  5792,312 ±(99.9%) 1331,617 ops/s [Average]
+  (min, avg, max) = (4596,941, 5792,312, 6852,372), stdev = 792,424
+  CI (99.9%): [4460,695, 7123,929] (assumes normal distribution)
+
+
+# JMH 1.15 (released 10 days ago)
+# VM version: JDK 1.8.0_101, VM 25.101-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Xmx1256M -Xms1256M
+# Warmup: 4 iterations, 200 ms each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: de.jawb.benchmark.HashcodeEqualsBenchmark.testHashcode_Regular
+
+# Run progress: 83,33% complete, ETA 00:00:13
+# Fork: 1 of 3
+# Warmup Iteration   1: 532368,859 ops/s
+# Warmup Iteration   2: 509654,263 ops/s
+# Warmup Iteration   3: 536904,569 ops/s
+# Warmup Iteration   4: 534875,865 ops/s
+Iteration   1: 498691,720 ops/s
+Iteration   2: 509859,834 ops/s
+Iteration   3: 522495,879 ops/s
+
+# Run progress: 88,89% complete, ETA 00:00:09
+# Fork: 2 of 3
+# Warmup Iteration   1: 550022,077 ops/s
+# Warmup Iteration   2: 476287,114 ops/s
+# Warmup Iteration   3: 346774,814 ops/s
+# Warmup Iteration   4: 437851,494 ops/s
+Iteration   1: 482662,021 ops/s
+Iteration   2: 472207,885 ops/s
+Iteration   3: 288479,993 ops/s
+
+# Run progress: 94,44% complete, ETA 00:00:04
+# Fork: 3 of 3
+# Warmup Iteration   1: 548305,879 ops/s
+# Warmup Iteration   2: 505101,965 ops/s
+# Warmup Iteration   3: 537860,987 ops/s
+# Warmup Iteration   4: 501461,726 ops/s
+Iteration   1: 454604,977 ops/s
+Iteration   2: 518327,520 ops/s
+Iteration   3: 524884,510 ops/s
+
+
+Result "testHashcode_Regular":
+  474690,482 ±(99.9%) 124155,350 ops/s [Average]
+  (min, avg, max) = (288479,993, 474690,482, 524884,510), stdev = 73882,857
+  CI (99.9%): [350535,132, 598845,832] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:01:21
+
+Benchmark                                         Mode  Cnt       Score        Error  Units
+HashcodeEqualsBenchmark.testEquals_Builder       thrpt    9     822,564 ±     13,113  ops/s
+HashcodeEqualsBenchmark.testEquals_Reflection    thrpt    9      24,915 ±      1,510  ops/s
+HashcodeEqualsBenchmark.testEquals_Regular       thrpt    9    7105,938 ±    195,020  ops/s
+HashcodeEqualsBenchmark.testHashcode_Builder     thrpt    9  500183,093 ±  51891,751  ops/s
+HashcodeEqualsBenchmark.testHashcode_Reflection  thrpt    9    5792,312 ±   1331,617  ops/s
+HashcodeEqualsBenchmark.testHashcode_Regular     thrpt    9  474690,482 ± 124155,350  ops/s

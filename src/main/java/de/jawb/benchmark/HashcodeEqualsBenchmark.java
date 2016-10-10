@@ -13,8 +13,8 @@ import de.jawb.model.PersonWithBuilder;
 import de.jawb.model.PersonWithReflection;
 
 @Fork(value = 3)
-@Warmup(iterations = 4, time = 2, timeUnit = TimeUnit.SECONDS)
-@Measurement(iterations = 5, time = 450, timeUnit = TimeUnit.MILLISECONDS)
+@Warmup(iterations = 4, time = 200, timeUnit = TimeUnit.MILLISECONDS)
+@Measurement(iterations = 3, time = 1, timeUnit = TimeUnit.SECONDS)
 public class HashcodeEqualsBenchmark {
 
     private static final List<PersonRegular>        regular    = PersonLoader.loadAs(PersonRegular.class);

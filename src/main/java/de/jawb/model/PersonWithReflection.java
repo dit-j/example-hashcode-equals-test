@@ -5,7 +5,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 public final class PersonWithReflection extends AbstractPerson {
 
-
     @Override
     public int hashCode() {
         return HashCodeBuilder.reflectionHashCode(this);
