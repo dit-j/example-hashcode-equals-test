@@ -20,7 +20,7 @@ HashcodeEqualsBenchmark.testHashcode_Reflection  thrpt    9    5792,312 ±   133
 HashcodeEqualsBenchmark.testHashcode_Regular     thrpt    9  474690,482 ± 124155,350  ops/s
 ```
 
-![alt tag](https://github.com/dit-j/example-hashcode-equals-test/master/docs/equals.png)
+![alt tag](docs/equals.png)
 ![alt tag](https://github.com/dit-j/example-hashcode-equals-test/master/docs/hashcode.png|alt=octocat])
 
 
