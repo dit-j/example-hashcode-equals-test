@@ -13,7 +13,8 @@ In diesem Beispielprojekt werden verschiedene Möglichkeiten die equals- und has
 
 Aus dieser Apache Bibliothek werden die Klassen ```HashCodeBuilder``` und ```Equalsbuilder``` verwendet. Mit Hilfe dieser Klassen können equals und hashcode-Methoden entweder über Reflection oder Builder erstellt werden:
 
-1. ```
+1. 
+```java
 @Override
 public int hashCode() {
     return HashCodeBuilder.reflectionHashCode(this);
@@ -27,7 +28,7 @@ public boolean equals(Object obj) {
 
 
 
-```
+```xml
 <dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-lang3</artifactId>
