@@ -6,7 +6,34 @@ In diesem Beispielprojekt werden verschiedene Möglichkeiten die equals- und has
 2. Reflection - Verwendung von HashCodeBuilder und Equalsbuilder aus Apache Commons 3
 3. Builder - Verwendung von HashCodeBuilder und Equalsbuilder aus Apache Commons 3
 
-##### *Ziel:* Rausfinden, wie stark sich die verschiedenen Methoden softwaretechnisch aber auch in der Ausführungsgeschwindigkeit unterscheiden
+### *Ziel:* Rausfinden, wie stark sich die verschiedenen Methoden softwaretechnisch aber auch in der Ausführungsgeschwindigkeit unterscheiden
+
+### Verwendete Bibliotheken
+###### Apache Commons Lang
+
+Aus dieser Apache Bibliothek werden die Klassen ```HashCodeBuilder``` und ```Equalsbuilder``` verwendet. Mit Hilfe dieser Klassen können equals und hashcode-Methoden entweder über Reflection oder Builder erstellt werden:
+
+1. ```
+@Override
+public int hashCode() {
+    return HashCodeBuilder.reflectionHashCode(this);
+}
+
+@Override
+public boolean equals(Object obj) {
+    return EqualsBuilder.reflectionEquals(this, obj);
+}
+```
+
+
+
+```
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+	<version>3.4</version>
+</dependency>
+```
 
 
 ```
