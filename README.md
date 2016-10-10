@@ -6,7 +6,7 @@ In diesem Beispielprojekt werden verschiedene Möglichkeiten die equals- und has
 2. Reflection - Verwendung von HashCodeBuilder und Equalsbuilder aus Apache Commons 3
 3. Builder - Verwendung von HashCodeBuilder und Equalsbuilder aus Apache Commons 3
 
-###### *Ziel:* Rausfinden, wie stark sich die verschiedenen Methoden softwaretechnisch aber auch in der Ausführungsgeschwindigkeit unterscheiden
+##### *Ziel:* Rausfinden, wie stark sich die verschiedenen Methoden softwaretechnisch aber auch in der Ausführungsgeschwindigkeit unterscheiden
 
 
 ```
