@@ -20,8 +20,8 @@ HashcodeEqualsBenchmark.testHashcode_Reflection  thrpt    9    5792,312 ±   133
 HashcodeEqualsBenchmark.testHashcode_Regular     thrpt    9  474690,482 ± 124155,350  ops/s
 ```
 
--> ![equals-benchmark](docs/equals.png) <-
-->![hashcode-benchmark](docs/hashcode.png)<-
+![equals-benchmark](docs/equals.png)
+![hashcode-benchmark](docs/hashcode.png)
 
 
 ### Verwendete Bibliotheken
