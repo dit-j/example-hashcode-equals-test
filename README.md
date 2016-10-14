@@ -1,4 +1,4 @@
-## example-hashcode-equals-test
+# example-hashcode-equals-test
 
 In diesem Beispielprojekt werden verschiedene Möglichkeiten die equals- und hashcode-Methoden zu überschreiben getestet.
 
@@ -20,8 +20,8 @@ HashcodeEqualsBenchmark.testHashcode_Reflection  thrpt    9    5792,312 ±   133
 HashcodeEqualsBenchmark.testHashcode_Regular     thrpt    9  474690,482 ± 124155,350  ops/s
 ```
 
-[[https://github.com/dit-j/example-hashcode-equals-test/tree/master/docs/equals.png|alt=octocat]]
-[[https://github.com/dit-j/example-hashcode-equals-test/tree/master/docs/hashcode.png|alt=octocat]]
+![equals-benchmark](docs/equals.png)
+![hashcode-benchmark](docs/hashcode.png)
 
 
 ### Verwendete Bibliotheken
