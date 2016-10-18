@@ -7,6 +7,7 @@ import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Measurement;
 import org.openjdk.jmh.annotations.Warmup;
+import org.openjdk.jmh.infra.Blackhole;
 
 import de.jawb.model.PersonRegular;
 import de.jawb.model.PersonWithBuilder;
@@ -21,10 +22,7 @@ public class HashcodeEqualsBenchmark {
     private static final List<PersonWithReflection> reflection = PersonLoader.loadAs(PersonWithReflection.class);
     private static final List<PersonWithBuilder>    builder    = PersonLoader.loadAs(PersonWithBuilder.class);
 
-    // verhindere compiler optimierung...
-    public static long                              sum        = 0;
-
-    private void runEquals(List<?> list) {
+    private long runEquals(List<?> list) {
         long i = 0;
         for (Object a : list) {
             for (Object b : list) {
@@ -33,45 +31,45 @@ public class HashcodeEqualsBenchmark {
                 }
             }
         }
-        sum += i;
+        return i;
     }
 
-    private void runHashCode(List<?> list) {
+    private long runHashCode(List<?> list) {
         long i = 0;
         for (Object a : list) {
             i += a.hashCode();
         }
-        sum += i;
+        return i;
     }
 
     @Benchmark
-    public void testEquals_Regular() throws Exception {
-        runEquals(regular);
+    public void testEquals_Regular(Blackhole bh) throws Exception {
+        bh.consume(runEquals(regular));
     }
 
     @Benchmark
-    public void testHashcode_Regular() throws Exception {
-        runHashCode(regular);
+    public void testHashcode_Regular(Blackhole bh) throws Exception {
+        bh.consume(runHashCode(regular));
     }
 
     @Benchmark
-    public void testEquals_Reflection() throws Exception {
-        runEquals(reflection);
+    public void testEquals_Reflection(Blackhole bh) throws Exception {
+        bh.consume(runEquals(reflection));
     }
 
     @Benchmark
-    public void testHashcode_Reflection() throws Exception {
-        runHashCode(reflection);
+    public void testHashcode_Reflection(Blackhole bh) throws Exception {
+        bh.consume(runHashCode(reflection));
     }
 
     @Benchmark
-    public void testEquals_Builder() throws Exception {
-        runEquals(builder);
+    public void testEquals_Builder(Blackhole bh) throws Exception {
+        bh.consume(runEquals(builder));
     }
 
     @Benchmark
-    public void testHashcode_Builder() throws Exception {
-        runHashCode(builder);
+    public void testHashcode_Builder(Blackhole bh) throws Exception {
+        bh.consume(runHashCode(builder));
     }
 
 }
