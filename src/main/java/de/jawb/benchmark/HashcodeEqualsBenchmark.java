@@ -1,13 +1,21 @@
 package de.jawb.benchmark;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.Fork;
 import org.openjdk.jmh.annotations.Measurement;
+import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
+import org.openjdk.jmh.results.RunResult;
+import org.openjdk.jmh.runner.Runner;
+import org.openjdk.jmh.runner.RunnerException;
+import org.openjdk.jmh.runner.options.Options;
+import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import de.jawb.model.PersonRegular;
 import de.jawb.model.PersonWithBuilder;
@@ -16,6 +24,7 @@ import de.jawb.model.PersonWithReflection;
 @Fork(value = 3)
 @Warmup(iterations = 4, time = 200, timeUnit = TimeUnit.MILLISECONDS)
 @Measurement(iterations = 3, time = 1, timeUnit = TimeUnit.SECONDS)
+@State(Scope.Benchmark)
 public class HashcodeEqualsBenchmark {
 
     private static final List<PersonRegular>        regular    = PersonLoader.loadAs(PersonRegular.class);
@@ -70,6 +79,15 @@ public class HashcodeEqualsBenchmark {
     @Benchmark
     public void testHashcode_Builder(Blackhole bh) throws Exception {
         bh.consume(runHashCode(builder));
+    }
+
+    public static void main(String[] args) throws RunnerException {
+        Options opt = new OptionsBuilder() //
+                .include(HashcodeEqualsBenchmark.class.getSimpleName())
+                .build();
+
+        Runner runner = new Runner(opt);
+        Collection<RunResult> results = runner.run();
     }
 
 }
