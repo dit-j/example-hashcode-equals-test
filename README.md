@@ -11,13 +11,13 @@ In diesem Beispielprojekt werden verschiedene Möglichkeiten die equals- und has
 
 ### Benchmark
 ```
-Benchmark                                         Mode  Cnt       Score        Error  Units
-HashcodeEqualsBenchmark.testEquals_Builder       thrpt    9     822,564 ±     13,113  ops/s
-HashcodeEqualsBenchmark.testEquals_Reflection    thrpt    9      24,915 ±      1,510  ops/s
-HashcodeEqualsBenchmark.testEquals_Regular       thrpt    9    7105,938 ±    195,020  ops/s
-HashcodeEqualsBenchmark.testHashcode_Builder     thrpt    9  500183,093 ±  51891,751  ops/s
-HashcodeEqualsBenchmark.testHashcode_Reflection  thrpt    9    5792,312 ±   1331,617  ops/s
-HashcodeEqualsBenchmark.testHashcode_Regular     thrpt    9  474690,482 ± 124155,350  ops/s
+Benchmark                                         Mode  Cnt       Score       Error  Units
+HashcodeEqualsBenchmark.testEquals_Builder       thrpt    9     672,513 ±    27,769  ops/s
+HashcodeEqualsBenchmark.testEquals_Reflection    thrpt    9      23,128 ±     1,434  ops/s
+HashcodeEqualsBenchmark.testEquals_Regular       thrpt    9    5882,242 ±   202,038  ops/s
+HashcodeEqualsBenchmark.testHashcode_Builder     thrpt    9  388164,619 ±  7000,510  ops/s
+HashcodeEqualsBenchmark.testHashcode_Reflection  thrpt    9    6810,513 ±   517,025  ops/s
+HashcodeEqualsBenchmark.testHashcode_Regular     thrpt    9  425432,583 ± 14447,940  ops/s
 ```
 
 ![equals-benchmark](docs/equals.png)
